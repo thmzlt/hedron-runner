@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> { } }:
 
 pkgs.dockerTools.buildImageWithNixDb {
-  name = "ghcr.io/thmzlt/hedron";
+  name = "ghcr.io/thmzlt/hedron-runner";
   tag = "latest";
 
   contents = [
