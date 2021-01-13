@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { } }:
+{ pkgs ? import (fetchTarball "https://github.com/nixos/nixpkgs/archive/release-20.09.tar.gz") { } }:
 
 pkgs.dockerTools.buildImageWithNixDb {
   name = "ghcr.io/thmzlt/hedron-runner";
