@@ -6,18 +6,12 @@ pkgs.dockerTools.buildImageWithNixDb {
 
   contents = [
     ./root
-    #pkgs.bashInteractive
+    pkgs.bashInteractive
+    pkgs.cacert
     pkgs.coreutils
+    pkgs.git
     pkgs.man
     pkgs.nix
-
-    # runtime dependencies of nix
-    pkgs.cacert
-    pkgs.git
-    #pkgs.gnutar
-    #pkgs.gzip
-    #pkgs.openssh
-    #pkgs.xz
   ];
 
   extraCommands = ''
